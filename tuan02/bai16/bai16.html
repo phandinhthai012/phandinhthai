@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            box-shadow: 1px 1px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h1>Travel reservation form</h1>
+        <h2>*denotes mandotory</h2>
+        <br>
+        <label for="txtName">Full name*:</label><br>
+        <input type="text" name="txtName" id="txtName" placeholder="firstName lastName"><br>
+        <label for="txtEmail">Email address*:</label><br>
+        <input type="text" name="txtEmail" id="txtEmail" placeholder="EMAIL_ADDRESS"> <br>
+        <label for="selectTour">Select Tour Package*:</label> <br>
+        <select name="selectTour" id="selectTour">
+            <option value="Goa">Goa</option>
+            <option value="HaNoi">Hanoi</option>
+            <option value="HCM">HCM</option>
+        </select> <br>
+        <label for="txtdate">Arrival date:*</label> <br>
+        <input type="text" name="txtdate" id="txtdate" placeholder="m/d/y"> <br>
+        <label for="txtNumber">Number of persons*:*</label> <br>
+        <input type="text" name="txtNumber" id="txtNumber" placeholder="UNKNOWN_TYPE"> <br>
+        <p style="margin: 0;">what would you want to avail?*</p>
+        <label for="Boarding"> Boarding</label>
+        <input type="checkbox" id="Boarding" name="Boarding" value="Boarding"> <br>
+        <label for="vehicle2"> Fooding</label>
+        <input type="checkbox" id="Fooding" name="Fooding" value="Car"> <br>
+        <label for="vehicle3"> Sight seeing</label>
+        <input type="checkbox" id="Sight seeing" name="Sight seeing" value="Boat"> <br>
+        <label for="txtDiscount">Discount Coupon code:</label> <br>
+        <input type="text" name="txtDiscount" id="txtDiscount" placeholder="UNKNOWN_TYPE"> <br>
+        <p>terms and conditions*</p>
+         <label for="txtagree">I agree</label><input type="radio" name="txtagree" id="txtagree">
+         <label for="txtdisagree">I disagree</label><input type="radio" name="txtdisagree" id="txtdisagree"> <br>
+         <input type="submit" value="Complete reservation">
+    </form>
+</body>
+</html>
