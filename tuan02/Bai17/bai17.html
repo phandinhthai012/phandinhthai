@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai17</title>
+</head>
+<body>
+    <div>
+        <h2 style="text-align: center;">Survey Form</h2>
+        <p>If you are interested in purchasing one or more of our products, before ordering please complete some or all of the following survey for our marketing department. Answering any question is optional, and all information will be kept strictly confidential. Thank you very much for your time!</p>
+        <ol>
+            <li><label for="txtName">What is your name?</label> <br>
+                <input type="text" name="txtName">
+            </li>
+            <li>
+                <p>what is your date of birth</p>
+                <label for="txtMonth">Month:</label>
+                <select name="txtMonth" id="txtMonth">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <label for="txtDate">Date:</label> <input type="datetime" name="txtDate" size="4">
+                <label for="txtYear">Year:</label> <input type="text" name="txtYear" size="4">
+            </li>
+            <li>
+                <label for="txtAdress">What is your mailing address (if ypu would like yo have a hard copy of our catalog sent to you)?</label><br>
+                <textarea name="txtAdress" id="txtAdress" cols="60" rows="4">numbre/P.O. Box/Route:
+Street/Avenue/Road:
+City:
+State/Zip:
+                
+                </textarea>
+            </li>
+            <li>
+                <label for="txtEmail">What is your email address</label> <br>
+                <input type="text" name="txtEmail">
+            </li>
+            <li>
+                <label for="checkRadio">Have you viewed our online product catalog</label> <br>
+                <input type="radio" name="checkRadio" id="checkRadio"><span>Yes</span>
+                <input type="radio" name="checkRadio" id="checkRadio"><span>No</span>
+            </li>
+            <li>
+                <label for="checkbox">If so, what product(s), besides the one you are order, minght you be intersted in purcharsing in the future? (check all that apply) </label> <br>
+                <input type="checkbox" name="checkbox" id="checkbox"> <span>VCR</span> <br>
+                <input type="checkbox" name="checkbox" id="checkbox"> <span>Big Screen TV</span> <br>
+                <input type="checkbox" name="checkbox" id="checkbox"> <span>Audio Equipment</span> <br>
+                <input type="checkbox" name="checkbox" id="checkbox"> <span>Video Equipment</span> <br>
+                <input type="checkbox" name="checkbox" id="checkbox"> <span>Camere Equipment</span> <br>
+                <input type="checkbox" name="checkbox" id="checkbox"> <span>Other</span> <input type="text" value="Please list:">
+            </li>
+            <li>
+                <label for="txtMe"></label>
+                <textarea name="txtMe" id="txtMe" cols="50" rows="10" >your Input:</textarea>
+            </li>
+        </ol> 
+        <div style="text-align: center;"> 
+            <input type="submit" value="Send Form" >
+            <input type="submit" value="Clear Form">
+        </div> 
+            
+    </div>
+</body>
+</html>
