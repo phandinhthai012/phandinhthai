@@ -34,7 +34,7 @@
     width: 250px;
     height: 50px;
 }
-#search-box {
+.search-box {
     background-color: #ffff;
     border: 1px solid rgb(108, 106, 106, 0.4);
     border-radius: 10px;
@@ -42,7 +42,7 @@
     line-height: 50px;
 }
 
-#search-box #search-txt {
+.search-box .search-txt {
     border: none;
     outline: none;
     background: none;
@@ -51,7 +51,7 @@
     
 }
 
-#search-box  #search-btn {
+.search-box  .search-btn {
     border: none;
     background: none;
     background-color:#ffff;
