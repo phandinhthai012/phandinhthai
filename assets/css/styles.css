@@ -3,7 +3,9 @@
     padding: 0 1px 0 1px;
     box-sizing: border-box;
 }
-
+.text-white {
+    color: #fff !important;
+}
 #header{
     width: 1440px;
     height: 62px;
@@ -28,17 +30,23 @@
 #header2 {
     line-height: 62px;
 }
+#box1 {
+    width: 250px;
+    height: 50px;
+}
 #search-box {
     background-color: #ffff;
-    border: 1px solid rgb(108, 106, 106);
+    border: 1px solid rgb(108, 106, 106, 0.4);
     border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
 }
 
 #search-box #search-txt {
     border: none;
     outline: none;
     background: none;
-    padding: 5px 10px;
+    padding: 2px 5px;
     font-size: 15px;
     
 }
@@ -47,8 +55,8 @@
     border: none;
     background: none;
     background-color:#ffff;
-    padding: 15px;
-    border-radius: 50%;
+    padding: 5px;
+    border-radius: 20%;
 }
 
 #header3 {
@@ -63,22 +71,20 @@
     height: 390px;
     width: 1440px;
     background: url('/assets/img/slider.png') top center / cover no-repeat;
+    
 }
 #slider .txt-content{
+    width: 460px;
+    height: 123px;
     position: absolute;
     top: 140px;
     left: 130px;
-    
 
-}
-.txt-content {
-    width: 460px;
-    height: 123px;
 }
 
 #slider .txt-heading
 {
-    color: rgb(53, 53, 53);
+   color: rgb(53, 53, 53);
    font-size: 60px;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -88,5 +94,66 @@
     font-weight:1000px;
     font-size: 22px;
 }
+#navigation {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navigation #nav{
+    display: inline-block;
+}
+
+#navigation #nav li {
+    width: 175px;
+    height: 50px;
+    margin-left: 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    list-style: none;
+    
+}
+
+#navigation #nav a {
+   color: rgb(107, 143, 108);
+   line-height: 50px;
+   text-decoration: none;
+   
+}
+#navigation #nav li:hover  a{
+    display: block;
+    background-color: rgb(107, 143, 108);
+    color: #fff;
+}
+
+#navigation #box3,    
+#navigation #box2 {
+    display: inline-block;
+}
 
 
+#navigation #box2 {
+    width: 250px;
+    height: 55px;
+}
+#navigation #box3 {
+    width: 100px;
+    height: 50px;
+    background-color: #acaaaa;
+    border-radius: 2px;
+    margin-left: 10px;
+}
+#navigation .txtSort {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 50px;
+
+}
+#navigation .icon{
+    font-size: 20px;
+    color: #fff;
+    float: right;
+    line-height: 50px;
+}
