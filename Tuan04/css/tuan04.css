@@ -4,18 +4,22 @@
     box-sizing: border-box;
 }
 
-nav {
+#nav {
     float: left;
     max-width: 100px;
+    display: flex;
+    flex-direction: column;
+
 }
 article{
-    margin-left: 170px;
+    margin-left: 0px;
     padding: 1em;
     overflow: hidden;
     max-width: 900px;
 
 }
 #nav li {
+    list-style: none;
     text-align: center;
 }
 #nav .main-logo {
@@ -30,6 +34,9 @@ article{
     height:40%;
     width: 40%;
 
+}
+#nav2 {
+    margin-top: 300px;
 }
 .title {
     position: relative;
@@ -75,5 +82,101 @@ article{
     margin-left: 4px;
     display: inline-block;
 }
+.img-main {
+    position: relative;
+}
+.img-box {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.img-title{
+    background-color: grey;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 12px;
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    color: #fff;
+    font-weight: 500;
+}
 
+.ti-control-record {
+    color: #4df320;
+}
 
+.icon-img {
+    display: inline-block;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    padding: 12px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(230, 12, 124);
+}
+.img-big{
+    width: 100%;
+}
+.img-sub{
+    width: 100%;
+}
+.img-item {
+    width: 33%;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-top: 16px;
+    border-radius: 8px;
+}
+
+.img-collection{
+    width: 100%;
+    border-radius: 8px;
+
+}
+.img-title1{
+    background-color: grey;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 4px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    
+}
+.icon-img1 {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(102, 102, 102);
+
+}
+
+#control {
+   text-align: center;
+    margin-top: 24px;
+    
+    
+}
+.utton-control{
+}
+.endmeeting{
+    display: inline;
+    background-color: red;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    line-height: 50%;
+}
