@@ -70,7 +70,7 @@
     margin-top: 0;
     height: 390px;
     width: 1440px;
-    background: url('/assets/img/slider.png') top center / cover no-repeat;
+    background: url('/assets/img/tuan03/slider.png') top center / cover no-repeat;
     
 }
 #slider .txt-content{
@@ -291,6 +291,7 @@ footer{
 .grid-colum2 {
     display: inline-table;
     margin: 64px 64px 128px 64px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .tf-desc {
@@ -322,12 +323,13 @@ footer{
 
 .txt-mail {
     margin: 0;
-    height: 40px;
+    height: 44px;
+    line-height: 45px;
     width: 100%;
     color: #fff;
     font-size: 20px;
     border: none;
-    background-color: #0b090f;
+    background: none;
     text-align:left;
 }
 .subscibe-btn {
