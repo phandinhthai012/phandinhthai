@@ -9,15 +9,17 @@
     max-width: 100px;
     display: flex;
     flex-direction: column;
-
+    
 }
 article{
     margin-left: 0px;
     padding: 1em;
     overflow: hidden;
-    max-width: 900px;
-
+    max-width: 1440px;
+    margin-right: 0;
+    display: flex;
 }
+
 #nav li {
     list-style: none;
     text-align: center;
@@ -37,6 +39,9 @@ article{
 }
 #nav2 {
     margin-top: 300px;
+}
+.content {
+    margin-right: 0;
 }
 .title {
     position: relative;
@@ -163,20 +168,148 @@ article{
 }
 
 #control {
-   text-align: center;
-    margin-top: 24px;
-    
-    
+   display: flex;
+   margin-top: 24px;
+   justify-content: center;
 }
-.utton-control{
+.box {
+    margin: 0 4px;
+    display: inline-block;
+    text-align: center;
+}
+.box-end{
+    margin: 0 4px;
+    margin-top: 12px;
 }
 .endmeeting{
-    display: inline;
     background-color: red;
-    padding: 15px 20px;
+    padding: 13.5px 20px;
     color: #fff;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
-    line-height: 50%;
+}
+.chat-parici{
+    margin-left: 50px;
+}
+
+.participants{
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 1px solid rgb(214, 213, 213);
+    border-bottom: 1px solid rgb(214, 213, 213);
+    padding: 20px 40px;
+}
+
+.tieude{
+    font-size: 25px;
+    font-weight: 700;
+    
+}
+
+.ttmai{
+    display: inline-block;
+}
+
+.tt-p{
+    display: inline-block;
+}
+
+.sl{
+    display: inline-block;
+    background-color:beige ;
+    padding: 6px 8px ;
+    border-radius: 100%;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ef2784;
+}
+.add{
+    font-weight: 500;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 70px;
+    border: 1px solid #ef2784;
+    color: #ef2784;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.parti-list{
+    margin-top: 16px;
+   
+}
+
+.par-item{
+   margin-top: 16px;
+   
+}
+
+.name-par{
+    margin-left: 0;
+    margin-right: 16px;
+    display: inline;
+}
+
+.img-par{
+    display: inline-block;
+}
+
+.name{
+    display: inline-block;
+    padding-bottom:15px ;
+}
+
+.icon-par{
+    display: inline-block;
+    float: right;
+    padding-top: 10px;
+}
+
+.chat {
+    margin-top: 24px;
+     border-left: 1px solid rgb(214, 213, 213);
+    border-bottom: 1px solid rgb(214, 213, 213);
+}
+.chat-item{
+    margin-top: 16px;
+}
+.chat-comment {
+    padding: 15px 8px;
+    background-color: #dedcdf;
+    margin-left: 40px;
+    border-radius: 5px;
+}
+
+.chat-txt{
+    padding: 15px;
+    text-align: center;
+}
+
+.chat-input {
+    padding: 8px;
+    background: none;
+    display: inline-block;
+    border: 1px solid #d6d2d2;
+}
+
+.txt-se {
+    height: 35px;
+    width: 270px;
+    border: none;
+    text-align: center;
+    margin-right: 0;
+}
+.icon-chat {
+    margin-left: 0;
+    height: 30px;
+    border: none;
+    background:none;
+}
+.btn-send {
+    border: none;
+    background:none;
+}
+.btn-send  img {
+    height: 50px;
+    width: 50px;
 }
