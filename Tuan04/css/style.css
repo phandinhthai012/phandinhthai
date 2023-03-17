@@ -41,7 +41,6 @@
 
 #center {
     width: 61%;
-    background-color: antiquewhite;
 }
 #heading{
     display: flex;
@@ -218,5 +217,146 @@
 
 #right {
     width: 30%;
-    background-color: brown;
 }
+
+.participants {
+   padding: 20px;
+   border-left: 1px solid #959595;
+   border-bottom: 1px solid #959595;
+}
+
+.header-tt {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hd3 {
+   
+   font-weight: 600;
+    display: inline-block;
+   
+}
+
+.par-name {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+
+}   
+
+.sluong {
+    display: inline-block;
+    font-size: 14px;
+    background-color:  rgba(253, 242, 244, 1);
+    padding: 2px 4px;
+    border-radius: 16px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.par-add {
+    display: inline-block;
+    float: right;
+    border: 1px solid rgba(234, 121, 150, 1);
+    padding: 6px 16px;
+    color: rgba(234, 121, 150, 1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.par-list {
+    padding-top: 24px;
+    padding-left: 16px;
+}
+
+.par-item {
+    padding-top: 16px;
+    padding-bottom: 8px;
+    font-size: 16px;
+    color: rgba(186, 186, 186, 1);
+}
+
+.avatar-par{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.name-par {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.icon-par {
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+    padding-top: 6px;
+}
+
+.icon-item {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.ti-more-alt {
+    vertical-align: middle;
+    display: inline-block;
+    color: rgba(110, 119, 135, 1);
+}
+
+.chat {
+    padding-top: 24px;
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+.Chat1 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 12px;
+}
+.chat-list {
+   padding-top: 24px;
+}
+.chat-item {
+
+}
+.avatar-chat {
+    display: inline-block;
+    vertical-align: middle;
+   
+
+}
+.name-chat {
+    display: inline-block;
+    vertical-align: middle;
+    color: rgba(186, 186, 186, 1);
+
+}
+
+.NDung {
+    padding: 8px 15px;
+    background-color: #959595;
+    margin-top: 15px;
+    border-radius: 5px;
+
+}
+
+.form-chat {
+
+}
+s
+.txt-se {
+    vertical-align: middle;
+
+}
+s
+.ti-themify-favicon {
+    vertical-align: middle;
+
+}
+.btn-send {
+    vertical-align: middle;
+
+}
+                       
