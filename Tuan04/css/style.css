@@ -217,12 +217,14 @@
 
 #right {
     width: 30%;
+    margin-left: 48px;
 }
 
 .participants {
+    margin-top: 12px;
    padding: 20px;
-   border-left: 1px solid #959595;
-   border-bottom: 1px solid #959595;
+   border-left: 1px solid rgb(227, 227, 227);
+   border-bottom: 1px solid rgb(227, 227, 227);
 }
 
 .header-tt {
@@ -272,7 +274,8 @@
     padding-top: 16px;
     padding-bottom: 8px;
     font-size: 16px;
-    color: rgba(186, 186, 186, 1);
+        color: #000000;
+
 }
 
 .avatar-par{
@@ -305,9 +308,12 @@
 }
 
 .chat {
+    margin-top: 12px;
     padding-top: 24px;
     padding-left: 20px;
     margin-bottom: 12px;
+    border-left: 1px solid rgb(227, 227, 227);
+    border-bottom: 1px solid rgb(227, 227, 227)rgb(227, 227, 227)
 }
 .Chat1 {
     font-size: 20px;
@@ -330,33 +336,50 @@
 .name-chat {
     display: inline-block;
     vertical-align: middle;
-    color: rgba(186, 186, 186, 1);
+    color: #000000;
 
 }
 
 .NDung {
     padding: 8px 15px;
-    background-color: #959595;
+    background-color: rgba(248, 249, 250, 1);
     margin-top: 15px;
     border-radius: 5px;
 
 }
 
 .form-chat {
-
+    text-align: center;
+    margin-top: 16px;
 }
-s
+.form-chat-right {
+    padding: 10px 30px;
+    display: inline-block;
+    outline: none;
+    background-color: rgba(248, 249, 250, 1);;
+}
+.icon-chat {
+    border: none;
+    height: 25px;
+    width: 35px;
+    align-items: center;
+}
 .txt-se {
     vertical-align: middle;
-
+    border: none;
+    height: 25px;
+    width: 200px;
 }
 s
 .ti-themify-favicon {
     vertical-align: middle;
+    width: 100%;
 
 }
 .btn-send {
     vertical-align: middle;
-
+    height: 48px;
+    width: 64px;
+    padding-left: 32px;
 }
                        
