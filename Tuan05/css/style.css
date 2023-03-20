@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 html{
     font-family: Arial, Helvetica, sans-serif;
@@ -89,7 +89,78 @@ html{
 
 
 #main {
+    width: 100%;
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main-body {
+    width: 1180px;
+}
+
+.main-body h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.main-body h4 {
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.main-review {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.rating-star {
+    display: inline-block;
+}
+.rating-tt {
+    display: inline-block;
+}
+.color-grey {
+    color: gray;
+}
+.share-save {
+    display: inline-block;
+
+    float: right;
+}
+.icon-share-review {
+    margin-right: 32px;
+}
+
+.icon-share {
+    vertical-align: middle;
+}
+
+.reviews-save {
+    display: inline-block;
+}
+
+.img-main {
+    margin-top: 12px;
+    display: flex;
+    width: 1180px;
+    
+}
+.img-big {
+    display: inline-block;
+    width: 50%;
+    padding-right: 12px;
+    padding-bottom: 4px;
+}
+
+.img-small {
+    display: inline-block;
+    width: 50%;
+}
+
+.img-item {
+    width: 49%;
+    padding: 4px 4px;
 }
 
 #footer {
