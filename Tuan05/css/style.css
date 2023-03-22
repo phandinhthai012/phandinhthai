@@ -7,7 +7,9 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+.clear {
+    clear: both;
+}
 .container {
     width: 1440px;
 }
@@ -95,9 +97,12 @@ html{
     justify-content: center;
 
 }
+.wapper-content {
+    width: 1180px;
+}
 
 .main-body {
-    width: 1180px;
+   
 }
 
 .main-body h1 {
@@ -125,7 +130,6 @@ html{
 }
 .share-save {
     display: inline-block;
-
     float: right;
 }
 .icon-share-review {
@@ -138,6 +142,7 @@ html{
 
 .reviews-save {
     display: inline-block;
+    padding-right: 20px;
 }
 
 .img-main {
@@ -159,10 +164,124 @@ html{
 }
 
 .img-item {
-    width: 49%;
-    padding: 4px 4px;
+    float: left;
+    width: 50%;
+    padding-left: 6px;
+    padding-top: -12px;
+    padding-top: 6px;
 }
 
+.product-description {
+    width: 100%;
+    margin-top: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ad3c3c;
+    height: 430px;
+}
+
+.description {
+    width: 70%;
+    display: inline-block;
+    float: left;
+    line-height: 1.4;
+    padding-right:32px;
+}
+
+.des-header {
+    margin-bottom: 12px;
+}
+.des-tt {
+    font-size: 15px;
+}
+.description-icon {
+    margin-top: 12px;
+    height: 100px;
+    width: 400px;
+}
+.des-row {
+ font-size: 15px;
+}
+.des-col {
+
+}
+.name-service {
+    display: inline-block;
+    vertical-align: middle;
+
+
+}
+.img-icon-des {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+
+}
+
+.buy-form {
+    float: left;
+    width: 30%;
+    border: 1px solid rgb(189, 189, 189, 0.2);
+    padding: 12px;
+    border-radius: 5px;
+}
+.form-hd1 {
+    display: inline;
+}
+.form-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ececec;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 5px;
+}
+.form-tt {
+    display: inline-block;
+}
+.ti-angle-down  {
+    display: inline-block;
+}
+.form-hd2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 8px 0;
+}
+.form-hd2 .total {
+    color: #ccc;
+
+}
+.form-hd2 .price {
+    font-weight: 600;
+}
+.btn-form {
+    text-align: center;
+    background-color:rgba(0, 189, 214, 1);
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+.btn-add-form {
+    text-align: center;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 189, 214, 1);
+    color: rgba(0, 189, 214, 1);
+    font-size: 18px;
+}
+.ti-shopping-cart .icon-form {
+    display: inline-block;
+    
+}
+.btn-add-form p {
+    display: inline-block;
+
+}
 #footer {
 
 }
+
