@@ -420,3 +420,126 @@ html{
     display: inline-block;
     float: right;
 }
+
+#footer {
+    padding-top: 44PX;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+.logo-ft {
+   margin-bottom: 16px;
+}
+
+.ft-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.form-email {
+    display: inline-block;
+    border: none;
+    padding-left: 8px;
+    color: #969696;
+    background-color: rgba(243, 244, 246, 1);
+    border-radius: 5px;
+}
+
+.ti-email {
+    vertical-align: middle;
+
+}
+
+.txt-emal {
+    border: none;
+    vertical-align: middle;
+    font-size: 16px;
+    outline: none;
+    background: none;
+}
+
+.btn-sub {
+    border: none;
+    font-size: 18px;
+    vertical-align: middle;
+    background-color: rgba(0, 189, 214, 1);
+    padding: 8px;
+    color: #fff;
+    border-radius: 5px;
+
+}
+
+.table {
+    padding-top: 32px;
+    display: flex;
+    justify-content:center
+}
+
+.table-item {
+    padding: 32px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.table-hd {
+
+}
+
+.item-tt {
+
+}
+
+.item-tt {
+
+}
+
+.contact {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.EL {
+    display: inline-block;
+    background-color:#ececec;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.name-el {
+    display: inline-block;
+}
+.ti-angle-down  {
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-el{
+
+}
+.contact-tt {
+    display: inline-block;
+}
+.tt-hd {
+    display: inline-block;
+}
+.tt {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.contact-tt ul{
+    display: inline-block;
+}
+
+.contact-tt a {
+    color: #797979;
+    text-decoration: none;
+}
+
+.contact-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+.contact-icon img {
+    margin-right :8px ;
+}
