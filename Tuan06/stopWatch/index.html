@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="time">
+            <span class="timers" id="hrs">00</span><span class="idsa">:</span>
+            <span class="timers" id="min">00</span><span class="idsa">:</span>
+            <span class="timers" id="sec">00</span><span class="idsa">:</span>
+            <span class="timers" id="count">00</span>
+        </div>
+    </div>
+    <script>
+        // var time = document.getElementById('time');s
+        var hours = 00;
+        var minute = 00;
+        var second = 00;
+        var count = 00;
+        timer =true;
+        function stopwatch() {
+            if(timer){
+                count++;
+                if(count==100){
+                    second ++;
+                    count=0;
+                }
+                if(second==60){
+                    minute++;
+                    second=0;
+                }
+                if(minute==60){
+                    hours++;
+                    minute=0;
+                    second=0;
+                }
+                var hoursstr = hours;
+                var minutestr = minute;
+                var secondstr = second;
+                var countstr = count;
+                if(hours<10){
+                    hoursstr="0"+hoursstr;
+                }
+                if(minute<10){
+                    minutestr="0"+minutestr;
+                }
+                if(second<10){
+                    secondstr="0"+secondstr;
+                }
+                if(count<10){
+                    countstr="0"+countstr;
+                }
+                document.getElementById("hrs").innerHTML=hoursstr;
+                document.getElementById('min').innerHTML=minutestr;
+                document.getElementById('sec').innerHTML=secondstr;
+                document.getElementById('count').innerHTML=countstr;
+            }
+        }
+        setInterval(stopwatch,10);
+    </script>
+</body>
+</html>
