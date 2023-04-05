@@ -13,18 +13,42 @@
             <span class="timers" id="hrs">00</span><span class="idsa">:</span>
             <span class="timers" id="min">00</span><span class="idsa">:</span>
             <span class="timers" id="sec">00</span><span class="idsa">:</span>
-            <span class="timers" id="count">00</span>
+            <span class="timers" id="count">00</span> 
+        </div>
+        <div class="buttons">
+            <button id="pauseTimer">Pause</button>
+            <button id="startTimer">Start</button>
+            <button id="resetTimer">Reset</button>
         </div>
     </div>
     <script>
-        // var time = document.getElementById('time');s
         var hours = 00;
         var minute = 00;
         var second = 00;
         var count = 00;
-        timer =true;
-        function stopwatch() {
-            if(timer){
+        var int = null;
+      
+        var timedisplay = document.querySelector('.time');
+        document.getElementById('startTimer').addEventListener('click',()=>{
+            if(int !==null){
+                clearInterval(int);
+                
+            }
+            setInterval(stopwatch,10);
+        })
+        document.getElementById('resetTimer').addEventListener('click', ()=>{
+                clearInterval(int);
+                hours = 00;
+                minute = 00;
+                second = 00;
+                count = 00;
+                document.getElementById("hrs").innerHTML=hours;
+                document.getElementById('min').innerHTML=minute;
+                document.getElementById('sec').innerHTML=second;
+                document.getElementById('count').innerHTML=count;
+               
+            });
+            function stopwatch() {
                 count++;
                 if(count==100){
                     second ++;
@@ -60,8 +84,13 @@
                 document.getElementById('sec').innerHTML=secondstr;
                 document.getElementById('count').innerHTML=countstr;
             }
-        }
-        setInterval(stopwatch,10);
+        // var time = document.getElementById('time');s
+        // var hours = 00;
+        // var minute = 00;
+        // var second = 00;
+        // var count = 00;
+        // timer =true;
+        
     </script>
 </body>
 </html>
