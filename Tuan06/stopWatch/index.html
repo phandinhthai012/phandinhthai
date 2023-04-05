@@ -29,12 +29,15 @@
         var int = null;
       
         var timedisplay = document.querySelector('.time');
+        document.getElementById('pauseTimer').addEventListener('click',()=>{
+             clearInterval(int);
+        })
         document.getElementById('startTimer').addEventListener('click',()=>{
             if(int !==null){
                 clearInterval(int);
                 
             }
-            setInterval(stopwatch,10);
+            int =setInterval(stopwatch,10);
         })
         document.getElementById('resetTimer').addEventListener('click', ()=>{
                 clearInterval(int);
