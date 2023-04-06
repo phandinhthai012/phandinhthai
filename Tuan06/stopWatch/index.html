@@ -37,7 +37,7 @@
                 clearInterval(int);
                 
             }
-            int =setInterval(stopwatch,10);
+            int = setInterval(stopwatch,10);
         })
         document.getElementById('resetTimer').addEventListener('click', ()=>{
                 clearInterval(int);
@@ -45,10 +45,10 @@
                 minute = 00;
                 second = 00;
                 count = 00;
-                document.getElementById("hrs").innerHTML=hours;
-                document.getElementById('min').innerHTML=minute;
-                document.getElementById('sec').innerHTML=second;
-                document.getElementById('count').innerHTML=count;
+                document.getElementById("hrs").innerHTML=hours+"0";
+                document.getElementById('min').innerHTML=minute+"0";
+                document.getElementById('sec').innerHTML=second+"0";
+                document.getElementById('count').innerHTML=count+"0";
                
             });
             function stopwatch() {
