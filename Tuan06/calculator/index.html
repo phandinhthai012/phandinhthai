@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="calculator">
+        <!-- <div class="title">calculator</div>
+        <div class="results">
+            <input type="text" class="results" id="inputResult">
+        </div>
+        <div class="buttons">
+            <button value="7" class="button" onclick="toanhang(this)">7</button>
+            <button value="8"class="button" onclick="toanhang(this)">8</button>
+            <button value="9"class="button" onclick="toanhang(this)">9</button>
+            <button value="+"class="button" onclick="toantu(this)">+</button>
+        </div>
+        <div class="buttons">
+            <button value="4"class="button" onclick="toanhang(this)">4</button>
+            <button value="5"class="button" onclick="toanhang(this)">5</button>
+            <button value="6"class="button" onclick="toanhang(this)">6</button>
+            <button value="-"class="button" onclick="toantu(this)">-</button>
+        </div>
+        <div class="buttons">
+            <button value="1"class="button" onclick="toanhang(this)">1</button>
+            <button value="2"class="button" onclick="toanhang(this)">2</button>
+            <button value="3"class="button" onclick="toanhang(this)">3</button>
+            <button value="x"class="button" onclick="toantu(this)">x</button>
+        </div>
+        <div class="buttons">
+            <button value="0"class="button" onclick="toanhang(this)">0</button>
+            <button value="AC"class="button" onclick="reset(this)">AC</button>
+            <button value="="class="button" onclick="thuchien(this)">=</button>
+            <button value="/"class="button" onclick="toantu(this)">/</button>
+        </div> -->
+        <div class="title">calculator</div>
+        <div class="results">
+            <input type="text" class="results" id="inputResult">
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="buttonHandler(this)">7</button>
+            <button class="button" onclick="buttonHandler(this)" >8</button>
+            <button class="button" onclick="buttonHandler(this)" >9</button>
+            <button class="button" onclick="buttonHandler(this)" >+</button>
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="buttonHandler(this)" >4</button>
+            <button class="button" onclick="buttonHandler(this)" >5</button>
+            <button class="button" onclick="buttonHandler(this)" >6</button>
+            <button class="button" onclick="buttonHandler(this)" >-</button>
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="buttonHandler(this)" >1</button>
+            <button class="button" onclick="buttonHandler(this)" >2</button>
+            <button class="button" onclick="buttonHandler(this)" >3</button>
+            <button class="button" onclick="buttonHandler(this)" >x</button>
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="buttonHandler(this)" >0</button>
+            <button class="button" onclick="buttonHandler(this)" >AC</button>
+            <button class="button" onclick="buttonHandler(this)" >=</button>
+            <button class="button" onclick="buttonHandler(this)" >/</button>
+        </div>
+    </div>
+    <script>
+        var num1='';
+        var num2='';
+        var opt;
+        function buttonHandler(btn) {
+            const pressVlue = btn.innerText;
+            const resultInput = document.getElementById('inputResult');
+            if(isNaN(pressVlue)){
+                if(pressVlue== 'AC'){
+                    num1='';
+                    num2='';
+                    opt=undefined;
+                    resultInput.value ='';
+                    return;
+                }
+                if(pressVlue=='='){
+                    const result =perform(num1,num2,opt);
+                    resultInput.value =result;
+                    num1='';
+                    num2='';
+                    opt=undefined;
+                }
+                else{
+                    opt = pressVlue;
+                }
+            }
+            else {
+                if(opt){
+                    num2 +=pressVlue;
+                    resultInput.value=num2;
+                }
+                else {
+                    num1+=pressVlue;
+                    resultInput.value=num1;
+                }
+            }
+        }
+        function perform(va1,va2,x) {
+            va1 = Number(va1);
+            va2 = Number(va2);
+            switch(x) 
+            {
+                case '+':
+                    return va1+va2;
+                case '-':
+                    return va1-a2;
+                case '/':
+                    return va1/va2;
+                case 'x':
+                    return va1*va2;  
+            }
+        }
+    </script>
+    <!-- <script>
+        var a=null;
+        var b=null;
+        var c=null;
+        var kq = '';
+        var hi
+        function hienthi(x) {
+            if(!(x=='') && x!='ok'){
+                kq+=x;
+            }
+            document.getElementById('inputResult').value =kq;
+        } 
+        function toanhang(x){
+            if(a==null)
+                a=parseInt(x.value);
+            else 
+                b=parseInt(x.value);
+            hienthi(x.value);
+        }
+        function toantu(x){
+            c=x.value;
+            hienthi(x.value);
+        }
+        function thuchien() {
+            switch(c) {
+                case '+' :
+                    kq = a+b;
+                    break;
+                case '-' :
+                    kq = a-b;
+                    break;
+                case 'x' :
+                    kq = a*b;
+                    break;
+                case '/' :
+                    kq = a/b;
+                    break;
+                default :
+                    break;
+            }
+            // alert(kq);
+            hienthi('ok');
+            reset();
+        }
+        function reset() {
+            a=null;
+            b=null;
+            c=null;
+            kq=0;
+        }
+    </script> -->
+</body>
+</html>
