@@ -1,0 +1,278 @@
+*{
+    margin: 0 auto;
+    padding: 0 1px 0 1px;
+    box-sizing: border-box;
+}
+.text-white {
+    color: #fff !important;
+}
+#header{
+    width: 1440px;
+    height: 62px;
+    display: flex;
+    justify-content:space-around;
+    position: relative;
+    margin-bottom: 12px;
+}
+#header1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#header1 a {
+    text-decoration: none;
+    color: black;
+}
+
+#header1 div:hover  a {
+    color: rgb(0,0,0, 0.6);
+    padding-bottom: 5px;
+    border-bottom: 2px solid #0b090f;
+}
+.HD1 {
+    display: inline-block;
+    margin: 10px 15px;    
+}
+
+#header2 {
+    line-height: 62px;
+}
+.search-box {
+    background-color: #ffff;
+    border: 1px solid rgb(108, 106, 106, 0.4);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    margin-right: 12px;
+}
+.form-control.input {
+    border: none;
+    height: 100%;
+}
+.input-group.input {
+    height: 100%;
+}
+span.input-group-addon.input-icon {
+    border: none;
+    background: none;
+}
+#header3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* content */
+#slider {
+    position: relative;
+    margin-top: 0;
+    height: 390px;
+    width: 1440px;
+    background: url('/assets/img/tuan03/slider.png') top center / cover no-repeat;
+    
+}
+#slider .txt-content{
+    width: 460px;
+    height: 123px;
+    position: absolute;
+    top: 140px;
+    left: 130px;
+}
+
+#slider .txt-heading
+{
+   color: rgb(53, 53, 53);
+   font-size: 60px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#slider .txt-descrip
+{
+    font-weight:1000px;
+    font-size: 22px;
+}
+#navigation {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+#subNav2 {
+    display: flex;
+    justify-content: center;
+}
+#wrapper {
+    margin-top: 32px;
+    width: 1440px;
+}
+
+ul.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.product-item {
+    position: relative;
+    font-size: 15px;
+    width: 25%;
+    /* text-align: center; */
+    padding: 32px;
+    list-style: none;
+}
+.product-item .product-img {
+    width: 100%;
+    display:block;
+}
+
+.product-seller {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: #807e7e;
+    background-color: rgb(237, 194, 116);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.product-body {
+    padding: 0;
+}
+
+.product-title {
+    text-align: left;
+    margin-top: 10px;
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 600;
+}
+
+.product-content {
+    text-align: left;
+    margin-top: 10px;
+    font-family: 'Golos Text', sans-serif;
+    color: #ccc;
+}
+
+.product-price {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.product-price1 {
+    
+    font-weight: 600;
+    font-size: 30px;
+    display: inline-block;
+}
+
+.product-price2 {
+    font-size: 15px;
+    display: inline-block;
+    margin-left: 5px;
+    color: #545353;
+}
+
+.product-btn {
+    margin-left: 50px;
+    float: right;
+    text-align: center;
+}
+footer{
+    background-color: #0b090f;
+    padding-top: 64px;
+    padding-left: 128px;
+}
+
+.grid-colum1{
+    margin: 32px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.colum{
+    display:inline-table;
+    padding: 0 16px;
+    margin: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ft-heading {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.ft-list {
+    list-style: none;
+}
+
+.ft-list a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.list-item {
+    margin-top: 10px;
+    
+}
+
+.grid-colum2 {
+    display: inline-table;
+    margin: 64px 64px 128px 64px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tf-desc {
+    color: #fff;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 16px;
+}
+
+.box4 {
+   position: relative;
+   display: flex;
+   background:  #0b090f;
+   border: 1px solid #fbf5f5;
+}
+
+.input-group {
+    border: none;
+}
+
+.subscibe-btn {
+    background: #00B4CC;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    font-size: 20px;
+    margin: 0;
+}
+.icon-logo {
+    font-size: 25px;
+    margin-top: 24px;
+}
+.icon-twitter{
+    color: blue;
+}
+.icon-fb{
+    color: blue;
+}
+.icon-linkin{
+    color: rgb(129, 64, 157);
+}
+.icon-yt{
+    color: red;
+}
+
+.list-name {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.list-name li {
+    display:inline-block;
+}
+
