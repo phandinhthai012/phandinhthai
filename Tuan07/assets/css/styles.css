@@ -61,12 +61,11 @@ span.input-group-addon.input-icon {
 }
 
 /* content */
-
+/* slider */
 .slider {
     position: relative;
     margin-top: 0;
     height: 390px;
-    width: 1440px;
     background: url('/assets/img/tuan03/slider.png') top center / cover no-repeat;
     width: 100%;
 }
@@ -90,72 +89,34 @@ span.input-group-addon.input-icon {
     font-weight:1000px;
     font-size: 22px;
 }
+/* navigation */
 .navigation {
     margin-top: 25px;
-}
-
-.nav1 {
-    display: flex;
-    justify-content: center;
-} 
-
-.nav2 {
-    display: flex;
-    justify-content: center;
+    margin-right: 130px;
+    margin-left: 130px;
 }
 .nav2_sub {
     display: flex;
     justify-content: center;
 }
 
-/*  */
+/* product */
 #wrapper {
-    margin-top: 32px;
-    width: 1440px;
-}
-
-ul.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: -8px;
-    margin-left: -8px;
-}
-
-.product-item {
-    position: relative;
-    font-size: 15px;
-    width: 25%;
-    /* text-align: center; */
-    padding: 32px;
-    list-style: none;
-}
-.product-item .product-img {
-    width: 100%;
-    display:block;
+    margin: 25px 130px 0 130px;
 }
 
 .product-seller {
     position: absolute;
     top: 40px;
-    right: 40px;
+    left: 200px;
     color: #807e7e;
     background-color: rgb(237, 194, 116);
     border-radius: 15px;
     padding: 10px;
 }
-
-.product-body {
-    padding: 0;
+.img-product {
+    width: 100%;
 }
-
-.product-title {
-    text-align: left;
-    margin-top: 10px;
-    font-family: 'Golos Text', sans-serif;
-    font-weight: 600;
-}
-
 .product-content {
     text-align: left;
     margin-top: 10px;
@@ -163,31 +124,28 @@ ul.products {
     color: #ccc;
 }
 
-.product-price {
+.price {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
     padding-left: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-.product-price1 {
-    
-    font-weight: 600;
-    font-size: 30px;
-    display: inline-block;
+.price1 {
+    margin: 0;
+    font-size: 25px;
 }
 
-.product-price2 {
+.price3 {
     font-size: 15px;
-    display: inline-block;
-    margin-left: 5px;
-    color: #545353;
+    color: rgba(178, 178, 178, 0.5);
 }
 
-.product-btn {
-    margin-left: 50px;
-    float: right;
-    text-align: center;
+.icon-img {
+    margin: 0;
 }
+
+/* footer */
 footer{
     background-color: #0b090f;
     padding-top: 64px;
