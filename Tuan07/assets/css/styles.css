@@ -7,8 +7,6 @@
     color: #fff !important;
 }
 #header{
-    width: 1440px;
-    height: 62px;
     display: flex;
     justify-content:space-around;
     position: relative;
@@ -63,15 +61,16 @@ span.input-group-addon.input-icon {
 }
 
 /* content */
-#slider {
+
+.slider {
     position: relative;
     margin-top: 0;
     height: 390px;
     width: 1440px;
     background: url('/assets/img/tuan03/slider.png') top center / cover no-repeat;
-    
+    width: 100%;
 }
-#slider .txt-content{
+.txt-content{
     width: 460px;
     height: 123px;
     position: absolute;
@@ -79,27 +78,37 @@ span.input-group-addon.input-icon {
     left: 130px;
 }
 
-#slider .txt-heading
+.txt-heading
 {
    color: rgb(53, 53, 53);
    font-size: 60px;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#slider .txt-descrip
+.txt-descrip
 {
     font-weight:1000px;
     font-size: 22px;
 }
-#navigation {
+.navigation {
     margin-top: 25px;
-    display: flex;
-    justify-content: space-between;
 }
-#subNav2 {
+
+.nav1 {
+    display: flex;
+    justify-content: center;
+} 
+
+.nav2 {
     display: flex;
     justify-content: center;
 }
+.nav2_sub {
+    display: flex;
+    justify-content: center;
+}
+
+/*  */
 #wrapper {
     margin-top: 32px;
     width: 1440px;
