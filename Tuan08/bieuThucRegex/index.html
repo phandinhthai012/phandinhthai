@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regexr</title>
+</head>
+<body>
+    <!-- // 1. check number input
+      // 2. check character input
+
+      // 3. tao array 091-090-123 090.123.456 090 090 091 
+      // 4.replace: 091090123 090123456 090090091 -->
+    <div id="main">
+        <span>Input:</span>
+        <input type="text" placeholder="" id="input"><br>
+        <span>result:</span>
+        <button onclick="isNum()">click me</button>
+        <input type="text" id="output">
+    </div>
+    <script>
+        function isNum(){
+            var k = /[0-9]+/g;
+            var b = /[a-zA-z]+/g
+            var x = document.getElementById('input').value;
+            if(k.test(x)){
+                document.getElementById('output').value="is number";
+            }
+            if(b.test(x)){
+                document.getElementById('output').value="is charater";
+            }
+        }
+        var arr = ['091-090-123','090.123.456','090 090 091'];
+        console.log(typeof(arr));
+        console.log(arr[0]);
+        console.log(arr.length);
+        var p =/[-.\s]/g;
+        for (let index = 0; index < arr.length; index++) {
+            var c = arr[index].replace(p,''); 
+            console.log(c);
+        }
+        console.log(arr);
+    </script>
+</body>
+</html>
