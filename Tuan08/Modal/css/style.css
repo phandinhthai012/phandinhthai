@@ -1,0 +1,44 @@
+#main {
+    margin: 0 100px;
+}
+
+.header {
+    height: 250px;
+    width: 100%;
+    background-image: url('/Tuan08/Modal/img/cropped-basaksehirasm1.jpg');
+    background-size: contain;
+    background-repeat: repeat;
+    position: relative;
+}
+.header-title{
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translateY(-50%);
+    color: #301de5;
+    
+}
+.header-title h1 {
+    font-size: 3em;
+    font-weight: 600;
+}
+.btn {
+    color: #301de5;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 8px;
+    padding: 12px 20px;
+}
+
+.mg-t-24 {
+    margin-top: 24px;
+}
+.mg-b-20 {
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    background:none;
+    border: none;
+    outline: none;
+}

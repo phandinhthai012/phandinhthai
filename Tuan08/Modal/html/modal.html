@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/Tuan08/Modal/css/style.css">
+</head>
+<body>
+    <div id="main">
+        <div class="header">
+            <div class="header-title">
+                <h1>Tư vấn online</h1>
+            </div>
+        </div>
+        <div class="content mg-t-24">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-buton mg-b-20">
+                        <button type="button" class="btn">Trang chủ</button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Đặt lịch</button>
+                    </div>
+                    <div class="table-main">
+                        <table class="table table-striped">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã bênh nhân</th>
+                                    <th>Mật khẩu</th>
+                                    <th>Ngày Khám</th>
+                                    <th>Phụ thu dịch vụ</th>
+                                    <th>chuyên khoa</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Đặt lịch khám online</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="" class="modal-label">Mã Khám bệnh nhân</label> <br>
+                    <input type="text" placeholder="mã bệnh nhân" class="form-control"><br>
+                    <input type="text" class="modal-title"><br>
+
+                    <label for="" class="modal-label">Mật khẩu</label><br>
+                    <input type="text" placeholder="mật khẩu" class="form-control"><br>
+                    <input type="text" class="modal-title"><br>
+
+                    <label for="" class="modal-label">Ngày khám</label><br>
+                    <input type="text" placeholder="dd/mm/yyyy" class="form-control"><br>
+                    <input type="text" class="modal-title"><br>
+
+                    <label for="" class="modal-label">Loại dịch vụ</label><br>
+                    <div class="check-button">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Khám bệnh theo yêu cầu</label>
+                            <label><input type="checkbox" value="">Điều trị ngoại trú</label>
+                            <label><input type="checkbox" value="">Bác sĩ theo yêu cầu</label>
+                        </div>
+                        <!-- <input type="checkbox" id="v1" name="1" value="">
+                        <label for="v1">Khám bệnh theo yêu cầu</label> 
+                        <input type="checkbox" id="v2" name="2" value="">
+                        <label for="v2">Điều trị ngoại trú</label>
+                        <input type="checkbox" id="v3" name="3" value="">
+                        <label for="v3">Bác sĩ theo yêu cầu</label> -->
+                    </div>
+                    <button class="btn btn-primary">Đặt Lịch</button>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+    </div>
+    <script src="/Tuan08/Modal/js/main.js"></script>
+</body>
+</html>
