@@ -42,3 +42,13 @@
     border: none;
     outline: none;
 }
+
+select {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    height: 36px;
+}
+span {
+    color: red;
+}
