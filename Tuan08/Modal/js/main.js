@@ -80,12 +80,15 @@ function getInfo() {
         arrLichKham.push(ojbLichKham);
     
          // xóa form
-         document.getElementById('mabenhNhan').value="";
-         document.getElementById('matKhau').value="";
-         document.getElementById('ngayKham').value="";
-         document.getElementById('ngayKham').value='';
+        document.getElementById('mabenhNhan').value="";
+        document.getElementById('matKhau').value="";
+        document.getElementById('ngayKham').value="";
+        document.getElementById('ngayKham').value='';
         // in ds ra table
         inLichKham();
+        // let trnew = "<tr><td>"+0+"/td><td>"+mabenhnhan+"</td><td>"+matkhau+"</td><td>"+ngaykham+"</td><td>"+10000+"</td><td>"+chuyenkhoa+"</td></tr>";
+        
+        // $('#mytable').append(trnew);
     }
    
    
