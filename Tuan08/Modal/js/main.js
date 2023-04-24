@@ -8,21 +8,30 @@ function checkname(){
     errorDate = document.getElementById('errorDate');
     var regexMa =/^BN-\w{5}/g;
     var matk = /[\w\d]{6,}/g;
-    // if(mabenhnhan=="" || mabenhnhan==null){
-    //     errorMa.innerHTML= "(*)không được để trống";
-    // }
-    // else if(matkhau =="" || matkhau ==null){
-    //     errorMK.innerHTML= "(*)không được để trống";
-    // }
-    // else if(ngaykham=="" || ngaykham==null){
-    //     errorDate.innerHTML= "(*)không được để trống";
-    // }
-    // else if(!regexMa.test(mabenhnhan)){
-    //     errorMa.innerHTML= "(*)BN-YYYYY";
-    // }
-    // else if(!matk.test(matkhau)){
-    //     errorMK.innerHTML= "chứa từ 6 ký tự bất kỳ trở lên";
-    // };
+    if(mabenhnhan == "" || mabenhnhan==null){
+        errorMa.innerHTML= "(*)không được để trống";
+    }
+    else if(!regexMa.test(mabenhnhan)){
+        errorMa.innerHTML= "(*)BN-YYYYY";
+    }
+    else {
+        errorMa.innerHTML= " ";
+        
+    }
+    if(matkhau =="" || matkhau ==null){
+        errorMK.innerHTML= "(*)không được để trống";
+    }
+    else if(!matk.test(matkhau)){
+        errorMK.innerHTML= "chứa từ 6 ký tự bất kỳ trở lên";
+    }
+    if(ngaykham=="" || ngaykham==null){
+        errorDate.innerHTML= "(*)không được để trống";
+    }
+    else {
+        errorDate.innerHTML= "(*)";
+    }
+   
+    
 }
 function getInfo() {
     // lấy các giá trị tròng form
