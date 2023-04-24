@@ -3,6 +3,7 @@ function checkname(){
     var mabenhnhan = document.getElementById('mabenhNhan').value;
     var matkhau = document.getElementById('matKhau').value;
     var ngaykham = document.getElementById('ngayKham').value;
+    
     errorMa = document.getElementById('errorMa');
     errorMK = document.getElementById('errorMK');
     errorDate = document.getElementById('errorDate');
@@ -13,54 +14,80 @@ function checkname(){
     }
     else if(!regexMa.test(mabenhnhan)){
         errorMa.innerHTML= "(*)BN-YYYYY";
+        return false;
     }
     else {
-        errorMa.innerHTML= " ";
-        
+        errorMa.innerHTML= "";
     }
     if(matkhau =="" || matkhau ==null){
         errorMK.innerHTML= "(*)không được để trống";
     }
     else if(!matk.test(matkhau)){
         errorMK.innerHTML= "chứa từ 6 ký tự bất kỳ trở lên";
-    }
-    if(ngaykham=="" || ngaykham==null){
-        errorDate.innerHTML= "(*)không được để trống";
+        return false;
     }
     else {
-        errorDate.innerHTML= "(*)";
+        errorMK.innerHTML= "";
     }
-   
-    
+    ngaykham = new Date(ngaykham);
+    var x = new Date();
+    var day = x.getDate();
+    var month = x.getMonth()+1;
+    var year = x.getFullYear();
+    if(ngaykham.getFullYear()>year){
+        errorDate.innerHTML= "Ngày khám phải sau ngày hiện tại";
+        return false;
+    }
+    else if(ngaykham.getFullYear()<year){
+        errorDate.innerHTML= "";
+    }
+    else if(ngaykham.getMonth()+1<month){
+        errorDate.innerHTML= "";
+    }
+    else if(ngaykham.getMonth()+1>month){
+        errorDate.innerHTML= "Ngày khám phải sau ngày hiện tại";
+        return false;
+    }
+    else if(ngaykham.getDate()>day){
+        errorDate.innerHTML= "Ngày khám phải sau ngày hiện tại";
+        return false;
+    }
+    else if(ngaykham.getDate()<=day && ngaykham.getMonth()+1==month){
+        errorDate.innerHTML= "";
+    } 
+    return true;
 }
 function getInfo() {
     // lấy các giá trị tròng form
-    var mabenhnhan = document.getElementById('mabenhNhan').value;
-    var matkhau = document.getElementById('matKhau').value;
-    var ngaykham = document.getElementById('ngayKham').value;
-    date = new Date(ngaykham);
-    var loaidichvu = document.getElementsByName('dichVu');
-    var dichvu = getdichvuCheckBox(loaidichvu);
-    var chuyenkhoa = document.getElementById('chuyenKhoa').value;
-    console.log(chuyenkhoa);
-    // tạo object
-    var ojbLichKham = {
-        mabenhnhan : mabenhnhan,
-        matkhau : matkhau,
-        ngaykham : date,
-        dichvu : dichvu,
-        chuyenkhoa : chuyenkhoa
+    if(checkname()){
+        var mabenhnhan = document.getElementById('mabenhNhan').value;
+        var matkhau = document.getElementById('matKhau').value;
+        var ngaykham = document.getElementById('ngayKham').value;
+        var loaidichvu = document.getElementsByName('dichVu');
+        var dichvu = getdichvuCheckBox(loaidichvu);
+        var chuyenkhoa = document.getElementById('chuyenKhoa').value;
+        console.log(chuyenkhoa);
+        // tạo object
+        var ojbLichKham = {
+            mabenhnhan : mabenhnhan,
+            matkhau : matkhau,
+            ngaykham : ngaykham,
+            dichvu : dichvu,
+            chuyenkhoa : chuyenkhoa
+        }
+    
+        // đưa object vao mảng
+        arrLichKham.push(ojbLichKham);
+    
+         // xóa form
+         document.getElementById('mabenhNhan').value="";
+         document.getElementById('matKhau').value="";
+         document.getElementById('ngayKham').value="";
+         document.getElementById('ngayKham').value='';
+        // in ds ra table
+        inLichKham();
     }
-
-    // đưa object vao mảng
-    arrLichKham.push(ojbLichKham);
-
-     // xóa form
-     document.getElementById('mabenhNhan').value="";
-     document.getElementById('matKhau').value="";
-     document.getElementById('ngayKham').value="";
-    // in ds ra table
-    inLichKham();
+   
    
     
 };
