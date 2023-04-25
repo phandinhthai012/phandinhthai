@@ -64,7 +64,7 @@ function getInfo() {
         var matkhau = document.getElementById('matKhau').value;
         var ngaykham = document.getElementById('ngayKham').value;
         var loaidichvu = document.getElementsByName('dichVu');
-        var dichvu = getdichvuCheckBox(loaidichvu);
+        dichvu = getdichvuCheckBox(loaidichvu);
         var chuyenkhoa = document.getElementById('chuyenKhoa').value;
         console.log(chuyenkhoa);
         // tạo object
@@ -107,10 +107,10 @@ function getInfo() {
 // }
 
 function getdichvuCheckBox(loaidichvu){
-    var dichVu = '';
+    dichVu =0;
     for(i=0; i<loaidichvu.length; i++){
     if(loaidichvu[i].checked==true){
-        dichVu += loaidichvu[i].value +";";
+        dichVu +=  parseFloat(loaidichvu[i].value);
         }
     }
     return dichVu;
@@ -161,7 +161,7 @@ function inLichKham(){
         cell2.innerHTML = obj.mabenhnhan;
         cell3.innerHTML = obj.matkhau;
         cell4.innerHTML = obj.ngaykham;
-        cell5.innerHTML = "1000000";
+        cell5.innerHTML = obj.dichvu;
         cell6.innerHTML = obj.chuyenkhoa;
     }
 }
