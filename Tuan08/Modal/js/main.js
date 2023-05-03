@@ -78,7 +78,6 @@ function getInfo() {
     
         // đưa object vao mảng
         arrLichKham.push(ojbLichKham);
-    
          // xóa form
         document.getElementById('mabenhNhan').value="";
         document.getElementById('matKhau').value="";
@@ -86,9 +85,18 @@ function getInfo() {
         document.getElementById('ngayKham').value='';
         // in ds ra table
         inLichKham();
-        // let trnew = "<tr><td>"+0+"/td><td>"+mabenhnhan+"</td><td>"+matkhau+"</td><td>"+ngaykham+"</td><td>"+10000+"</td><td>"+chuyenkhoa+"</td></tr>";
-        
-        // $('#mytable').append(trnew);
+        //  let trnew = "<tr><td>"+0+"/td><td>"+ojbLichKham.mabenhnhan+"</td><td>"+ojbLichKham.matkhau+"</td><td>"+ojbLichKham.ngaykham+"</td><td>"+ojbLichKham.dichvu+"</td><td>"+ojbLichKham.chuyenkhoa+"</td></tr>";
+        // let x = `<tr>
+        //             <td>${0}</td>
+        //             <td>${ojbLichKham.mabenhnhan}</td>
+        //             <td>${ojbLichKham.matkhau}</td>
+        //             <td>${ojbLichKham.ngaykham}</td>
+        //             <td>${ojbLichKham.dichvu}</td>
+        //             <td>${ojbLichKham.chuyenkhoa}</td>
+        //         </tr>`;
+        // // $('#mytable').append(trnew);
+        // document.getElementById('mytable').innerHTML += x;
+        // document.getElementById('mytable').append(trnew);
     }
    
    
