@@ -1,0 +1,23 @@
+/*Định dạng dường kẻ */
+
+[class*=col-]{
+    border: 1px solid #808088;
+}
+
+/*From ngang*/
+.horizontal-form [class*=col-] {
+    border: none;
+}
+
+#er1, #er2, #er3 {
+    color: red;
+    font-style: italic;
+}
+
+.nav li {
+    padding: 20px;
+    
+}
+.nav li a {
+    color: black;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<script>
+    function ktraten(){
+        var regex = /^[A-Z]+[A-Za-z]*(\s*[A-Z]+[A-Za-z]*)*$/;
+        var ten = document.getElementById("txtten").value;
+        if(regex.test(ten)){
+            document.getElementById("er1").innerHTML="";
+            return true;
+        }
+        else {
+            document.getElementById("er1").innerHTML="Ten Sai";
+            return false;
+        }
+    }
+    function ktrans(){
+        var ns = document.getElementById("txtns").value;
+        ns = new Date(ns);
+        var now = new Date;
+        var t = now.getFullYear()-ns.getFullYear();
+        if(t>=16) {
+            document.getElementById("er2").innerHTML="";
+            return true;
+        }
+        else {
+            document.getElementById("er2").innerHTML="";
+            return false;
+        }
+    }
+    var count = 1;
+    function dk() {
+        if(ktraten() && ktrans()){
+            var t = document.getElementById("txtten").value;
+            var ns = document.getElementById("txtns").value;
+            var n = document.getElementById("frmdk").length;
+            var gt ="";
+            for(var i =0; i<n; i++){
+                if(document.getElementById("frmdk").elements[i].checked==true && document.getElementById("frmdk").elements[i].type=='radio')
+                    gt=document.getElementById("frmdk").elements[i].value;
+            }
+            var ngonngu = "";
+            for(var i=0; i<n; i++){
+                if(document.getElementById("frmdk").elements[i].checked==true && document.getElementById("frmdk").elements[i].type=='checkbox')
+                    ngonngu += document.getElementById("frmdk").elements[i].value+ ",";
+            }
+            var mh = document.getElementById("lstmh").value;
+            var b = document.getElementById("tblInfor");
+            var h = b.insertRow();
+            // var row = table.insertRow();
+
+
+            var cell1 =  h.insertCell(0);
+            var cell2 = h.insertCell(1);
+            var cell3 = h.insertCell(2);
+            var cell4 = h.insertCell(3);
+            var cell5 = h.insertCell(4);
+            cell1.innerHTML = t;
+            cell2.innerHTML = ns;
+            cell3.innerHTML= gt;
+            cell4.innerHTML = ngonngu;
+            cell5.innerHTML = mh;
+        }
+    }
+    function chonMH(){
+        var mh = document.getElementById("lstmh").value;
+        document.getElementById("txtgia").value=mh;
+    }
+</script>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Ôn Tập</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class=" nav navbar navbar-default navbar-expand-md">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav">
+                            <li><a href="#"></a>Home</li>
+                            <li><a href="#"></a>Page1</li>
+                            <li><a href="#"></a>Page2</li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">page 1<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Page 1-1</a></li>
+                                    <li><a href="#">Page 1-2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"></a>Page3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                left
+            </div>
+            <div class="col-6">
+                <input type="button" value="open Modal" class="btn btn-danger" data-toggle="modal" data-target="#formDK">
+                <table class="table table-hover" id="tblInfor">
+                    <tr>
+                        <th>Name</th>
+                        <th>NgaySinh</th>
+                        <th>GioiTinh</th>
+                        <th>NgonNgu</th>
+                        <th>Mon</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-3">
+                right
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" style="height: 100px;">
+                logo
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="formDK">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Form Dang Ki online</h3>
+                    <button class="close " data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="frmdk" class="horizontal-form">
+                        <div class="form-group row">
+                            <label  for="txtten" class="label-control col-3">Name</label>
+                            <div class="col-9">
+                                <input type="text" id="txtten" placeholder="name" class="form-group" onblur="ktraten()"/>
+                                <span id="er1">(*)</span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label  for="txtns" class="label-control col-3">NgaySinh</label>
+                            <div class="col-9">
+                                <input type="date" id="txtns" placeholder="name" class="form-group" onblur="ktrans()"/>
+                                <span id="er2">(*)</span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label   class="label-control col-3">Giới Tính:</label>
+                            <div class="col-9">
+                                <input type="radio" class="radio-inline" name="gt" value="nam"/> Nam
+                                <input type="radio" class="radio-inline" name="gt" value="Nu"> Nu
+                               
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label  class="label-control col-3">Ngon Ngu</label>
+                            <div class="col-9">
+                               <input type="checkbox" class="checkbox-inline" value="Anh"> Anh
+                               <input type="checkbox" class="checkbox-inline" value="Phap">Phap
+                               <input type="checkbox" class="checkbox-inline" value="Trung"> Trung
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label  class="label-control col-3">Mon Hoc</label>
+                            <div class="col-9">
+                                <select name="" id="lstmh" class="form-control" onchange="chonMH()">
+                                    <option value="120000">LTHDT</option>
+                                    <option value="150000">Java</option>
+                                    <option value="200000">Mang</option>
+                                </select>
+                                <br>
+                                <input type="text" id="txtgia">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label  class="label-control col-3">&nbsp;</label>
+                            <div class="col-9">
+                                <input type="button" value="dang ky" onclick="dk()">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
