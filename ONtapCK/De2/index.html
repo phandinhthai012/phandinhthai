@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+<style>
+    [class*=col-]{
+        border: 1px solid #888888;
+        padding: 24px;
+    }
+    #er1,#er2 {
+        padding: 0;
+        margin: 0;
+        color: red;
+    }
+    .form-group {
+        margin-bottom: 0;
+        margin-top: 12px;
+    }
+    .boder{
+        margin-top: 12px;
+        border: 1px solid #0000;
+    }
+</style>
+<script>
+    function ktrMa(){
+        var ma = document.getElementById('txtMaSO').value;
+        var er=document.getElementById('er1');
+        var regex = /^PE16000[0-9]{3}/;
+        if(ma=='' || ma==null){
+           er.innerHTML='khong de trong';
+            return false;
+        }
+        else if(regex.test(ma)){
+           er.innerHTML='';
+        }
+        else {
+           er.innerHTML='Mã số đồng có dạng PE16000XXX, trong đó XXX là 3 số';
+        }
+    }
+    function ktraThang(){
+        var thang = document.getElementById('txtthang').value;
+        var now = new Date();
+        var nowmonth = now.getMonth()+1;
+        var day = new Date(thang);  
+        var month = day.getMonth()+1;
+        if(nowmonth<=month){
+            alert('chọn lại tháng');
+        }
+        document.getElementById('txtthang').value='';
+    }
+    function ktraTien(){
+        var tien = document.getElementById('txttien').value;
+        var regex = /[0-9]{4,}/;
+        var er=document.getElementById('er2');
+        if(tien=='' || tien == null ){
+            er2.innerHTML='khong de trong';
+            return false;
+        }
+        else if(regex.test(tien)){
+            er2.innerHTML='';
+        }
+        else {
+            er2.innerHTML=' Số tiền là XXXXX000, X là các ký tự số.';
+            return false;
+        }
+    }
+    function tinhGiamGia(){
+        var giam = document.getElementById('khuvuc').value;
+        document.getElementById('txtphantram').value=giam;
+    }
+    function dk(){
+        var ma = document.getElementById('txtMaSO').value;
+        var thang = document.getElementById('txtthang').value;
+        var day = new Date(thang);
+        var thang =day.getMonth()+1;
+        var loaihinh;
+        var llao = document.getElementsByName('loaihinh');
+        for(i =0; i<llao.length; i++){
+            if(llao[i].checked==true){
+                loaihinh = llao[i].value;
+            }
+        }
+        console.log(thang);
+        console.log(loaihinh);
+        var sotien = document.getElementById('txttien').value;
+        var phamtram = document.getElementById('txtphantram').value;
+       
+        sotien=parseFloat(sotien);
+        phamtram=parseFloat(phamtram)/100;
+        var tongtien = sotien-sotien*phamtram;
+        
+        let trnew =` <tr>
+                            <td>${ma}</td>
+                            <td>${thang}</td>
+                            <td>${loaihinh}</td>
+                            <td>${tongtien}</td>
+                        </tr>`
+        $('#mytable').append(trnew);       
+    }
+</script>
+<body>
+    <div id="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>DIEN LUC THANH PHO HO CHI MINH</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                PHIEU DONG TIEN ONLINE
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                left
+            </div>
+            <div class="col-9" style="padding-left: 24px;">
+                <form action="" id="formDK">
+                    <div class="form-group">
+                        <label for="" class="lable-control row">Ma so dong ho dien</label>
+                        <input type="text" class="form-group row" id="txtMaSO" placeholder="Ma so dong ho" style="width: 64%;" onblur="ktrMa()">
+                        <span id="er1">(*)</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="lable-control row">Thang</label>
+                        <input type="month" class="form-group row" id="txtthang"style="width: 64%;" onblur="ktraThang()">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="lable-control row">So Tien</label>
+                        <input type="text" class="form-group row" id="txttien"style="width: 64%;" onblur="ktraTien()">
+                        <span id="er2">(*)</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="lable-control">Loai hinh</label>
+                        <input type="radio" class="radio-inline" name="loaihinh" value="Ho GD">Ho GD
+                        <input type="radio" class="radio-inline" name="loaihinh" value="DoanhNghiep">DoanhNghiep
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="lable-control row">Khu vuc</label>
+                        <select name="" id="khuvuc" class="form-control row" onchange="tinhGiamGia()">
+                            <option value="10%">Khu vuc 1</option>
+                            <option value="20%">Khu vuc 2</option>
+                            <option value="30%">Khu vuc 3</option>
+
+                        </select>
+                        <input type="text" class="form-group row" id="txtphantram"style="width: 64%;">
+                        
+                    </div>
+                    
+                </form>
+                <button  class='btn-primary' id="btn" onclick="dk()">Dong</button>
+                <div class="boder">
+                    <table class="table table-hover" id="mytable">
+                        <tr>
+                            <th>Ma so ho</th>
+                            <th>Thang</th>
+                            <th>Loai hinh</th>
+                            <th>tong tien</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

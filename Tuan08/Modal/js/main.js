@@ -173,4 +173,3 @@ function inLichKham(){
         cell6.innerHTML = obj.chuyenkhoa;
     }
 }
-
