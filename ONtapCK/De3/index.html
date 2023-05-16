@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <style>
+       /* [class*=col-]{
+        border: 1px solid #888888;
+       } */
+       #container {
+        margin-left: 24px;
+        padding-left: 12px;
+       }
+       .text-center{
+          display:flex ;
+          justify-content: center;
+       }
+       .bodder{
+        border: 1px solid #888888;
+       }
+       #er1, #er2, #er3 {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="container">
+        <div class="row bg-warning">
+            <div class="col-12">
+                 <nav class="navbar navbar-expand">
+                    <div>
+                        <img src="./img/logo7.png" alt="">
+                    </div>
+                     <ul class="navbar-nav ">
+                        
+                         <li class="nav-item"><a href="#" class="nav-link text-secondary">Trang Chủ </a></li>
+                         <li class="nav-item"><a href="#" class="nav-link text-secondary">Giới Thiệu</a></li>
+                         <li class="nav-item"><a href="#" class="nav-link text-secondary">Dịch Vụ</a></li>
+                         <li class="nav-item"><a href="#" class="nav-link text-secondary">Ký Gửi hàng hóa</a></li>
+                         <li class="nav-item"><a href="#" class="nav-link text-secondary">liên hệ </a></li>
+
+                     </ul>
+                 </nav>
+            </div>
+        </div> -->
+        <!-- <div class="row">
+            <div class="col-12">
+                <div class="navbar navbar-expand">
+                    <div>
+                        <img src="./img/logo7.png" alt="">
+                    </div>
+                    <ul class="navbar-nav ">
+                        <li class="nav-item"><a href="" class="nav-link">Trang Chủ</a></li>
+                        <li class="nav-item"><a href="">Trang Chủ</a></li>
+                        <li class="nav-item"><a href="">Trang Chủ</a></li>
+                        <li class="nav-item"><a href="">Trang Chủ</a></li>
+                        <li class="nav-item"><a href="">Trang Chủ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="row">
+            <div class="col-8">
+                form
+            </div>
+            <div class="col-4">
+                
+            </div>
+        </div>
+    </div> -->
+    <div id="container">
+        <div class="row bg-warning">
+            <div class="col-12">
+                <div class="nav navbar navbar-expand">
+                    <div class="img">
+                        <img src="./img/logo7.png" alt="logo">
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="" class="nav-link">Trang chủ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Giới Thiệu</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Dịch Vụ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link" data-target="#myModal" data-toggle="modal">Ký Gửi Hàng Hóa</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Liên Hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row bodder">
+            <div class="col-8 bodder">
+                form
+            </div>
+            <div class="col-4 bodder">
+                <ul>
+                    <h5>Qui Định thanh toán</h5>
+                    <li>Khách cọc từ 70%-100% số tiền của đơn hàng</li>
+                    <li>hàng về sau 24-48 tiếng kể từ khi kho trung Quốc ký nhận</li>
+                    <li>shop sẽ thanh lý đơn hàng nếu sau 1 tuần khách hàng không thanh toán tiền nhận hàng</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <h3 class="text-primary">Danh Sách Kiện Hàng Hóa gửi</h3>
+            <table class="table table-hover table-bordered table-striped" id="tble">
+                <tr>
+                    <th>STT</th>
+                    <th>Số Serial</th>
+                    <th>Mô tả hàng hóa</th>
+                    <th>hình ảnh</th>
+                    <th>trọng lượng(kg)</th>
+                    <th>Phí vận chuyển(VND) </th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>OZMO-600</td>
+                    <td>robot hut bụi lau nhà Dreame D9 Pro</td>
+                    <td>qưertyuiosdfgh</td>
+                    <td>3.5</td>
+                    <td>122500</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>OZMO-600</td>
+                    <td>robot hut bụi lau nhà Dreame D9 Pro</td>
+                    <td>qưertyuiosdfgh</td>
+                    <td>3.5</td>
+                    <td>122500</td>
+                </tr>
+            </table>
+        </div>
+        <div class="row bg-warning text-center">
+            <p class="">Mã số:21038281-Họ tên: Phan Đình Thái</p>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Thông Tin Kiện Hàng Gửi</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="frmdk">
+                        <div class="row form-group">
+                            <label for="" class="col-4 label-control">số serial:</label>
+                            <div class="col-8">
+                                <input type="text" id="txtSerial" class="form-group"><br>
+                                <span id="er1">(*)</span>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="" class="col-4 label-control">Mô tả Kiện hàng</label>
+                            <div class="col-8">
+                                <input type="text" id="txtKienHang"  class="form-group"><br>
+                                <span id="er2">(*)</span>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="" class="col-4 label-control">Hinh anh:</label>
+                            <div class="col-8">
+                                <input type="file" name="Choose file" id="img" accept="image/png, image/jpeg" onchange="updatefilename()">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="" class="col-4 label-control">Trọng lượng</label>
+                            <div class="col-8">
+                                <input type="number" id="txttrongluong" class="form-group"><br>
+                                <span id="er3">(*)</span>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="" class="col-4 label-control">Phí vận chuyển</label>
+                            <div class="col-8">
+                                <input type="text" id="txtGia"  class="form-group"><br>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-primary" id="btn-xacnhan"  onclick="dk()">Xác Nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jsquery.js"></script>
+    <script>
+      
+    </script>
+</body>
+</html>
